@@ -9,6 +9,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium.Firefox;
+using System.Reflection;
 
 namespace ConsoleApp1
 {
@@ -23,9 +25,9 @@ namespace ConsoleApp1
         [SetUp]
         public void startBrowser()
         {
-            // driver = new ChromeDriver("C:\\Users\\ssk\\eclipse-workspace\\Flipkart");
-            //driver = new FirefoxDriver("D:\\Tools\\Firefox_driver\\geckodriver-v0.23.0-win64");
-            driver = new ChromeDriver("D:\\");
+            //  driver = new ChromeDriver("C:\\Users\\ssk\\eclipse-workspace\\Flipkart");
+          //   driver = new FirefoxDriver("D:\\Tools\\Firefox_driver\\geckodriver-v0.23.0-win64");
+            //driver = new ChromeDriver("D:\\Tools\\chromedriver_win32");
 
         }
         [TearDown]
@@ -36,6 +38,9 @@ namespace ConsoleApp1
         [TestMethod]
         public void TestUpdateCallReport()
         {
+            Assembly asm = Assembly.GetExecutingAssembly();
+            string path = System.IO.Path.GetDirectoryName(asm.Location);
+            driver = new ChromeDriver(path);
             driver.Url = "https://wiprolimited04.crm8.dynamics.com/main.aspx";
             Thread.Sleep(1000);
             var login = driver.FindElement(By.Id("i0116"));
