@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ConsoleApp1
 {
@@ -30,7 +31,7 @@ namespace ConsoleApp1
         {
             driver.Quit();
         }
-        [Test]
+        [TestMethod]
         public void TestUpdateCallReport()
         {
             driver.Url = "https://wiprolimited04.crm8.dynamics.com/main.aspx";

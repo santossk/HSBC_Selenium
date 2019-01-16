@@ -30,7 +30,7 @@ namespace ConsoleApp1
         {
             driver.Quit();
         }
-        [Test]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod]
         public void TestCreateCallReport()
         {
             driver.Url = "https://wiprolimited04.crm8.dynamics.com/main.aspx";
