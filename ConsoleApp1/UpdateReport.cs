@@ -12,7 +12,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ConsoleApp1
 {
-    class UpdateCallReport
+    [TestClass]
+    public class UpdateCallReport
     {
         IWebDriver driver;
         private readonly String _username = "testuser@wiprolimited04.onmicrosoft.com";
@@ -22,8 +23,9 @@ namespace ConsoleApp1
         [SetUp]
         public void startBrowser()
         {
-            driver = new ChromeDriver("C:\\Users\\ssk\\eclipse-workspace\\Flipkart");
+            // driver = new ChromeDriver("C:\\Users\\ssk\\eclipse-workspace\\Flipkart");
             //driver = new FirefoxDriver("D:\\Tools\\Firefox_driver\\geckodriver-v0.23.0-win64");
+            driver = new ChromeDriver("D:\\");
 
         }
         [TearDown]

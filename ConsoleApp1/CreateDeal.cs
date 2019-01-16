@@ -12,7 +12,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ConsoleApp1
 {
-    class CreateDeal
+    [TestClass]
+    public class CreateDeal
     {
         IWebDriver driver;
         private readonly String _username = "testuser@wiprolimited04.onmicrosoft.com";

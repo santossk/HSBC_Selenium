@@ -8,10 +8,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ConsoleApp1
 {
-    class CreateCallReport
+    [TestClass]
+    public class CreateCallReport
     {
         IWebDriver driver;
         private readonly String _username = "testuser@wiprolimited04.onmicrosoft.com";
